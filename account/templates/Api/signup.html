@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Api test</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <h1>Greetings to learn Api</h1>
+    <div class="col">
+      <div class="card">
+        <div class="card-header">Sign Up</div>
+        <div class="card-body">
+          {% comment %} <h5 class="card-title">Card title</h5> {% endcomment %}
+          <p class="card-text">
+            <form role="form" method="post" action="">
+            {% csrf_token %}
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          
+          </p>
+          <a href="{% url 'register' %}" class="btn btn-primary">Sig Up</a>
+          </form>
+          <a href="#" class="btn btn-primary">Sigin</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

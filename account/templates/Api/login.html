@@ -1,0 +1,42 @@
+{% load rest_framework %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Api test</title>
+  </head>
+  <body>
+    <h1>Greetings to learn Api</h1>
+    <div class="col">
+      <div class="card">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          {% comment %} <h5 class="card-title">Card title</h5> {% endcomment %}
+          <p class="card-text">
+          <form role="form" method="get" action="{% url 'home' user=user %}">
+            {% csrf_token %}
+            
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">username</label>
+            <input type="text" name="username" class="form-control" id="username" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password">
+          </div>
+          
+          
+          </p>
+          <a href="#" class="btn btn-primary">
+          <button type="submit" name="login">
+          Sigin
+          </button>
+          </a>
+          </form>
+          <a href="#" class="btn btn-primary">SigUp</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
